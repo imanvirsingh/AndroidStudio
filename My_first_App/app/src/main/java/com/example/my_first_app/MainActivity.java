@@ -27,7 +27,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String name= enterName.getText().toString();
-                nameText.setText("Hello " +name);
+                if(name.isEmpty()){
+                    nameText.setText("Please Enter Name");
+                }else {
+                    nameText.setText("Hello " + name);
+                }
 
             }
         });
